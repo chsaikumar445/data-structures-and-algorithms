@@ -11,32 +11,32 @@ struct Node {
 	}
 };
 
-// void preorder(Node *node) {
-// 	if (node == NULL) {
-// 		return;
-// 	}
-// 	cout << node -> data << endl;
-// 	preorder(node->left);
-// 	preorder(node->right);
-// }
+void preorder(Node *node) {
+	if (node == NULL) {
+		return;
+	}
+	cout << node -> data << endl;
+	preorder(node->left);
+	preorder(node->right);
+}
 
-// void inorder(Node *node) {
-// 	if (node == NULL) {
-// 		return;
-// 	}
-// 	inorder(node->left);
-// 	cout << node->data << endl;
-// 	inorder(node->right);
-// }
+void inorder(Node *node) {
+	if (node == NULL) {
+		return;
+	}
+	inorder(node->left);
+	cout << node->data << endl;
+	inorder(node->right);
+}
 
-// void postorder(Node *node) {
-// 	if (node == NULL) {
-// 		return;
-// 	}
-// 	postorder(node->left);
-// 	postorder(node->right);
-// 	cout << node->data << endl;
-// }
+void postorder(Node *node) {
+	if (node == NULL) {
+		return;
+	}
+	postorder(node->left);
+	postorder(node->right);
+	cout << node->data << endl;
+}
 
 void levelorder(Node *root) {
 	vector<vector<int>> ans;
@@ -205,11 +205,11 @@ int main() {
 	root->left->right = new Node(5);
 	root->right->left = new Node(6);
 	root->right->right = new Node(7);
-	// cout << "preorder" << endl;
-	// preorder(root);
-	// cout << "inorder" << endl;
-	// inorder(root);
-	// cout << "postorder" << endl;
-	// postorder(root);
+	cout << "preorder" << endl;
+	preorder(root);
+	cout << "inorder" << endl;
+	inorder(root);
+	cout << "postorder" << endl;
+	postorder(root);
 	preInPost(root);
 }
